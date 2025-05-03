@@ -8,7 +8,8 @@ const repository = 'Drag-and-drop-layout' // 根据您实际部署的仓库名�
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: `/${repository}/`,
+  // 在Vercel上部署时不需要设置base路径
+  // base: `/${repository}/`,
   build: {
     // 确保资源文件名不包含哈希值，避免路径问题
     assetsInlineLimit: 0,
